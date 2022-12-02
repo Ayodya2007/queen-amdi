@@ -75,9 +75,9 @@ AMDI({ cmd: ["song", "yta", "mp3"], desc: Lang.songDesc, example: Lang.songExa, 
         }
 
         const buttons = [
-            {type: "url", displayText: "Watch on YouTube", url: ytVidInfo.video_url},
-            {type: "click", displayText: "🎶 Audio File", buttonCMD: `${prefix}ytdl audio ${ytVidInfo.video_url}`},
-            {type: "click", displayText: "📁 Document File", buttonCMD: `${prefix}ytdl document ${ytVidInfo.video_url}`}
+            {type: "url", displayText: "╰𝘞𝘈𝘛𝘊𝘏 𝘖𝘕 𝘠𝘖𝘜𝘛𝘜𝘉𝘌╯", url: ytVidInfo.video_url},
+            {type: "click", displayText: "𝗔𝗨𝗗𝗜𝗢", buttonCMD: `${prefix}ytdl audio ${ytVidInfo.video_url}`},
+            {type: "click", displayText: "𝗗𝗢𝗖𝗨𝗠𝗘𝗡𝗧", buttonCMD: `${prefix}ytdl document ${ytVidInfo.video_url}`}
         ]
         return await sendButtonsMsg(buttons, {text: ytDlTXT, image: {url: thumb}, tagMsg: true, showURL: true});
     }

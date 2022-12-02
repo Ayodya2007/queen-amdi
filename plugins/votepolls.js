@@ -21,7 +21,7 @@ AMDI({ cmd: "vote", desc: Lang.voteDESC, example: Lang.voteEX, type: "admin", re
     const text = input.split('{')[0]
     const optINPUT = input.split('{')[1].split('}')[0]
     const isEMOJI = input.split('}')[1].replace(/ /g, "")
-    //let reactEmoji = isEMOJI == '' ? "☑️" : isEMOJI     ----FUTURE UPDATES
+    //let reactEmoji = isEMOJI == '' ? "🧚" : isEMOJI     ----FUTURE UPDATES
 
     return await sendVotePoll(text, optINPUT);
 }));

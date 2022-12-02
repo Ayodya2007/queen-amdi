@@ -42,7 +42,7 @@ AMDI({ cmd: "setwelcome", desc: Lang.setwelDesc, example: Lang.setwelEx, type: "
         await reply(Lang.WelcomSetted, "✅");
         return clearMedia(filename.file);
     } else {
-        const imgURL = 'https://i.ibb.co/XCfhtfH/301820a4f3c0.jpg'
+        const imgURL = 'https://telegra.ph/file/42d9c285b888a9ca409ce.jpg'
         const note = replied_text
         await setWelcome(amdiWA.clientJID, note, imgURL)
         return await reply(Lang.WelcomSetted, "✅");
@@ -50,7 +50,7 @@ AMDI({ cmd: "setwelcome", desc: Lang.setwelDesc, example: Lang.setwelEx, type: "
 }));
 
 
-AMDI({ cmd: "getwelcome", desc: Lang.getwelDesc, type: "admin", react: "📘" }, (async (amdiWA) => {
+AMDI({ cmd: "getwelcome", desc: Lang.getwelDesc, type: "admin", react: "🧚" }, (async (amdiWA) => {
     let { isGroup, reply, sendImage } = amdiWA.msgLayout;
 
     if (!isGroup) return;
@@ -61,7 +61,7 @@ AMDI({ cmd: "getwelcome", desc: Lang.getwelDesc, type: "admin", react: "📘" },
 }));
 
 
-AMDI({ cmd: "delwelcome", desc: Lang.delwelDesc, type: "admin", react: "🚮" }, (async (amdiWA) => {
+AMDI({ cmd: "delwelcome", desc: Lang.delwelDesc, type: "admin", react: "🦄" }, (async (amdiWA) => {
     let { isGroup, reply, react } = amdiWA.msgLayout;
 
     if (!isGroup) return;
@@ -96,7 +96,7 @@ AMDI({ cmd: "setbye", desc: Lang.setbyeDesc, example: Lang.setbyeEx, type: "admi
         await reply(Lang.ByeSetted, "✅");
         return clearMedia(filename.file);
     } else {
-        const imgURL = 'https://i.ibb.co/pbjB2pS/93f527f9f2fb.jpg'
+        const imgURL = 'https://telegra.ph/file/42d9c285b888a9ca409ce.jpg'
         const note = replied_text
         await setBye(amdiWA.clientJID, note, imgURL)
         return await reply(Lang.ByeSetted, "✅");
@@ -104,18 +104,18 @@ AMDI({ cmd: "setbye", desc: Lang.setbyeDesc, example: Lang.setbyeEx, type: "admi
 }));
 
 
-AMDI({ cmd: "getbye", desc: Lang.getbyeDesc, type: "admin", react: "📘" }, (async (amdiWA) => {
+AMDI({ cmd: "getbye", desc: Lang.getbyeDesc, type: "admin", react: "🍑" }, (async (amdiWA) => {
     let { isGroup, reply } = amdiWA.msgLayout;
 
     if (!isGroup) return
     let byedata = await getBye(amdiWA.clientJID)
     if (byedata == -1 || byedata.byenote == 'blank') return reply(Lang.nobyeset)
 
-    return await sendImage({ url: byedata.byepicurl }, {caption: '🔗 *Image URL :* \n' + byedata.byepicurl + '\n\n📄 *Bye note :* \n' + byedata.byenote, quoted: true, reactEmoji: "📖"});
+    return await sendImage({ url: byedata.byepicurl }, {caption: '🔗 *Image URL :* \n' + byedata.byepicurl + '\n\n📄 *Bye note :* \n' + byedata.byenote, quoted: true, reactEmoji: "🍍"});
 }));
 
 
-AMDI({ cmd: "delbye", desc: Lang.delbyeDesc, type: "admin", react: "🚮" }, (async (amdiWA) => {
+AMDI({ cmd: "delbye", desc: Lang.delbyeDesc, type: "admin", react: "🦥" }, (async (amdiWA) => {
     let { isGroup, reply } = amdiWA.msgLayout;
 
     if (!isGroup) return

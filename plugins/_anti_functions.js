@@ -2,9 +2,9 @@
 * @project_name Queen Amdi [WA Multi-device]
 * @author BlackAmda <https://github.com/BlackAmda>
 * @description A WhatsApp based 3ʳᵈ party application that provide many services with a real-time automated conversational experience
-* @link <https://github.com/BlackAmda/QueenAmdi>
+* @link <https://github.com/Ayodya2007>
 * @version 4.0.0
-* @file  _anti_functions.js - QueenAmdi anti-bad words, anti-links
+* @file  _anti_functions.js - PinkVenom anti-bad words, anti-links
 
 © 2022 Black Amda, ANTECH. All rights reserved.
 Licensed under the  GPL-3.0 License;

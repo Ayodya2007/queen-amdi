@@ -15,7 +15,7 @@ const { settingList, applyList } = _default_list_sections
 const Lang = Language.getString('settings');
 
 
-AMDI({ cmd: "apply", desc: Lang.setDesc, type: "profile", react: "👩🏻‍🎨" }, (async (amdiWA) => {
+AMDI({ cmd: "apply", desc: Lang.setDesc, type: "profile", react: "🧚" }, (async (amdiWA) => {
     let { prefix, isReply, reply, replied_text, sendListMsg  } = amdiWA.msgLayout;
 
     if (!isReply) return reply(Lang.needReplymsg)
@@ -30,7 +30,7 @@ AMDI({ cmd: "apply", desc: Lang.setDesc, type: "profile", react: "👩🏻‍�
 }));
 
 
-AMDI({ cmd: "settings", desc: Lang.setDesc, type: "profile", react: "⚙️" }, (async (amdiWA) => {
+AMDI({ cmd: "settings", desc: Lang.setDesc, type: "profile", react: "🎀️" }, (async (amdiWA) => {
     let { prefix, sendListMsg } = amdiWA.msgLayout;
 
     var listInfo = {}

@@ -28,13 +28,13 @@ AMDI({ cmd: ["fb", "facebook"], desc: Lang.fbDesc, example: Lang.fbEXA, type: "d
         if (res.data.hasError == false) {
             const captionDB = await getSettings('CAPTION')
             let caption = captionDB.input == undefined ? footerTXT : captionDB.input
-            await react("⬇️");
+            await react("🌟");
             if (res.data.body.videoHD) {
-                await react("⬆️");
+                await react("🧚");
                 await sendVideo({ url: res.data.body.videoHD }, {caption: `Quality: *HD*\n${caption}`, quoted: true});
                 return await react("✔️");
             } else {
-                await react("⬆️");
+                await react("🧚");
                 await sendVideo({ url: res.data.body.video }, {caption: `Quality: *SD*\n${caption}`, quoted: true});
                 return await react("✔️");
             }
@@ -52,12 +52,12 @@ AMDI({ cmd: ["ig", "insta", "instagram"], desc: Lang.igDesc, example: Lang.igEXA
     if (!isLINK(input)) return reply(Lang.needlink, '❓');
     if (!/^((https|http)?:\/\/(?:www\.)?instagram\.com\/(p|tv|reel|stories)\/([^/?#&]+)).*/i.test(input)) return reply(Lang.needvalidIG);
     
-    await react("⬇️");
+    await react("🌟");
     try {
         var igPost = await igDownloader(input);
         if (!igPost.length) return await reply(Lang.notfound, "❌");
 
-        await react("⬆️");
+        await react("🧚");
         igPost.forEach(async (data) => {
             if (data.type === 'image') {await sendImage({url: data.url}, {caption: footerTXT, quoted: true});}
             else if (data.type === 'video') {await sendVideo({url: data.url}, {caption: footerTXT, quoted: true});}
@@ -87,14 +87,14 @@ AMDI({ cmd: ["tk", "tiktok"], desc: Lang.TKDESC, example: Lang.tkEXA, type: "dow
     await sendButtonsMsg(tiktokHead, {text: TKText, image: {url: tkData.video.thumb }, tagMsg: true, noTemplate: 1});
 
     const vidButtons = [
-        {type: "click", displayText: '🔖 With Watermark', buttonCMD: `${prefix}tkdl mark ${input}`},
-        {type: "click", displayText: '📼 No-Watermark', buttonCMD: `${prefix}tkdl nomark ${input}`}
+        {type: "click", displayText: 'With Watermark', buttonCMD: `${prefix}tkdl mark ${input}`},
+        {type: "click", displayText: 'No-Watermark', buttonCMD: `${prefix}tkdl nomark ${input}`}
     ]
     await sendButtonsMsg(vidButtons, {text: '🎞️ Tiktok Video', noFooter: true, noTemplate: 1})
 
     const audButtons = [
-        {type: "click", displayText: "🎶 Audio File", buttonCMD: `${prefix}tkdl audio ${input}`},
-        {type: "click", displayText: "📁 Document File", buttonCMD: `${prefix}tkdl doc ${input}`}
+        {type: "click", displayText: "ᴀᴜᴅɪᴏ", buttonCMD: `${prefix}tkdl audio ${input}`},
+        {type: "click", displayText: "ᴅᴏᴄᴜᴍᴇɴᴛ", buttonCMD: `${prefix}tkdl doc ${input}`}
     ]
     return await sendButtonsMsg(audButtons, {text: '🎶 Tiktok Audio', noFooter: true, noTemplate: 1});
 }));

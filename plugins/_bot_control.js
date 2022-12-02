@@ -1,10 +1,10 @@
 /**
-* @project_name Queen Amdi [WA Multi-device]
+* @project_name Pink Venom [WA Multi-device]
 * @author BlackAmda <https://github.com/BlackAmda>
 * @description A WhatsApp based 3ʳᵈ party application that provide many services with a real-time automated conversational experience
-* @link <https://github.com/BlackAmda/QueenAmdi>
+* @link <https://github.com/BlackAmda/PinkVenom>
 * @version 4.0.0
-* @file  _bot_control.js - QueenAmdi bot control commands
+* @file  _bot_control.js - PinkVenom bot control commands
 
 © 2022 Black Amda, ANTECH. All rights reserved.
 Licensed under the  GPL-3.0 License;
@@ -23,7 +23,7 @@ const fs = require('fs');
 const { writeFile } = require('fs/promises');
 const Lang = Language.getString('botCTRL');
 
-AMDI({ cmd: "restart", desc: "Restart the bot", type: "profile", react: "🔃" }, (async (amdiWA) => {
+AMDI({ cmd: "restart", desc: "Restart the bot", type: "profile", react: "🥀" }, (async (amdiWA) => {
     let { reply, restart } = amdiWA.msgLayout
 
     await reply('*Restarting...*');
@@ -31,7 +31,7 @@ AMDI({ cmd: "restart", desc: "Restart the bot", type: "profile", react: "🔃" }
 }));
 
 
-AMDI({ cmd: "backup", desc: Lang.backupDESC, type: "profile", react: "📤" }, (async (amdiWA) => {
+AMDI({ cmd: "backup", desc: Lang.backupDESC, type: "profile", react: "🍭" }, (async (amdiWA) => {
     let { sendDocument } = amdiWA.msgLayout
     
     try {    
@@ -176,7 +176,7 @@ AMDI({ cmd: "rate", desc: Lang.rateDESC, type: "primary", react: "✨" }, (async
 
     if (!input) {
         const botname = await getMiscData('BOTNAME');
-        let BOTNAME = !botname.data ? 'Queen Amdi' : botname.data
+        let BOTNAME = !botname.data ? 'Pink Venom' : botname.data
 
         var listInfo = {}
         listInfo.title = Lang.ratesTitle.format(BOTNAME)

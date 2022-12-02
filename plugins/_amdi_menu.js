@@ -10,7 +10,7 @@
 | |\/| | | | | | __| |_____| | | |/ _ \ \ / / |/ __/ _ \
 | |  | | |_| | | |_| |_____| |_| |  __/\ V /| | (_|  __/
 |_|  |_|\__,_|_|\__|_|     |____/ \___| \_/ |_|\___\___|
-* @project_name Queen Amdi [WA Multi-device]
+* @project_name Pink Venom [WA Multi-device]
 * @author BlackAmda <https://github.com/BlackAmda>
 * @description A WhatsApp based 3ʳᵈ party application that provide many services with a real-time automated conversational experience
 * @link <https://github.com/BlackAmda/QueenAmdi>
@@ -32,7 +32,7 @@ const Lang = Language.getString('amdiMenu');
  * @cmdTypes primary, download, logo, profile, admin
 */
 
-AMDI({ cmd: ["panel", "list", "menu"], desc: "Queen Amdi Main Menu", type: "primary", react: "📂", cmdHideInMenu: true }, (async (amdiWA) => {
+AMDI({ cmd: ["panel", "list", "menu"], desc: "Pink Venom Main Menu", type: "primary", react: "🧚", cmdHideInMenu: true }, (async (amdiWA) => {
     let { prefix, sendAudioMsg, sendListMsg, msgDevice, sendername } = amdiWA.msgLayout;
    
     const audioURL = amdiVoice
